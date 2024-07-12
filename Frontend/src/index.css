@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  background-color: #454545;
+  padding: 0px;
+  margin:0px;
+  border: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.main-buttons{
+  color: #FFE6C7;
+  background-color: #FF6000;
+}
+
+.sidebarStyleOpen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13%;
+}
+
+.sidebarStyleClose{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%;
+}
+
+
+.black-tile{
+  background-color: #FF6000;
+}
+
+.white-tile{
+  background-color: #FFE6C7;
+}
+
+
+.top-div {
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  height: 7rem;
+  border-radius: 0.75rem;
+
+}
+
+.top-div.expanded{
+  background-color: rgb(4 120 87 / var(--tw-bg-opacity));
+}
+
+.dropdown {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.3s ease margin-bottom 0.3 ease;
+  color: #000;
+  position: absolute;
+  /* top: 60px; */
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin-bottom: 0px;
+}
+
+.dropdown.expanded {
+  border-top: 2px solid black;
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 120 87 / var(--tw-bg-opacity)) /* #047857 */;
+  margin-top:15px;
+  max-height: 10rem; /* Adjust as needed */
+  border-radius: 0.75rem;
+  color: white;
+}
+
+.dropdown ul {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown ul li {
+  height: 3.5rem;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+.bottom-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  height: 100px;
+  transition: transform 0.3s ease;
+  transform: translateY(-100%);
+  margin-top: 50px;
+}
+
+.bottom-div.slide-down {
+  margin-top: 100px;
+  transform: translateY(0);
+}
